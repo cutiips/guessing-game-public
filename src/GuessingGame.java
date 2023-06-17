@@ -4,20 +4,34 @@ Java game “Guess a Number” that allows user to guess a random number that ha
 source: https://hackr.io/blog/java-projects
 */
 
+import java.util.Scanner;
+
 public class GuessingGame {
     public static void main(String[] args) {
-        int computerNumber = (int) (Math.random() * 100 + 1);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose your difficulty level (1: Easy, 2: Hard): ");
+        int difficulty = scanner.nextInt();
+
+        int upperLimit;
+        if (difficulty == 1) {
+            upperLimit = 50;
+        } else {
+            upperLimit = 100;
+        }
+
+        int computerNumber = (int) (Math.random() * upperLimit + 1);
         int userAnswer = 0;
         System.out.println("The correct guess would be " + computerNumber);
         int count = 1;
 
         while (userAnswer != computerNumber) {
-            System.out.println("Enter a guess between 1 and 100: ");
-            String response = System.console().readLine();
-            userAnswer = Integer.parseInt(response);
+            System.out.println("Enter a guess between 1 and " + upperLimit + ": ");
+            userAnswer = scanner.nextInt();
             System.out.println(determineGuess(userAnswer, computerNumber, count));
             count++;
         }
+
+        scanner.close();
     }
 
     public static String determineGuess(int userAnswer, int computerNumber, int count) {
