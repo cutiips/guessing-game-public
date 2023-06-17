@@ -1,5 +1,5 @@
 /*
-Java game “Guess a Number” that allows user to guess a random number that has been generated.
+Java game "Guess a Number" that allows user to guess a random number that has been generated.
 
 source: https://hackr.io/blog/java-projects
 */
