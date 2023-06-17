@@ -39,7 +39,6 @@ public class GuessingGame {
 
         int computerNumber = (int) (Math.random() * upperLimit + 1);
         int userAnswer = 0;
-        System.out.println("The correct guess would be " + computerNumber);
         int count = 1;
 
         do {
@@ -55,6 +54,11 @@ public class GuessingGame {
                 }
             }
         } while (userAnswer != computerNumber);
+
+        int points = determinePoints(count);
+        System.out.println("Congratulations! You guessed the correct number.");
+        System.out.println("Total Guesses: " + count);
+        System.out.println("Points Earned: " + points);
     }
 
     public static String determineGuess(int userAnswer, int computerNumber, int count) {
