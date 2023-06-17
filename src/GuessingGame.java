@@ -43,9 +43,11 @@ public class GuessingGame {
             }
         } while (userAnswer != computerNumber);
 
+        int points = determinePoints(count);
         System.out.println("Congratulations! You guessed the correct number.");
         System.out.println("Total Guesses: " + count);
-        
+        System.out.println("Points Earned: " + points);
+
         scanner.close();
     }
 
@@ -59,6 +61,18 @@ public class GuessingGame {
         } else {
             return "Your guess is too low, try again.\nTry Number: " + count;
         }
+    }
+
+    public static int determinePoints(int count) {
+        int points;
+        if (count <= 3) {
+            points = 10;
+        } else if (count <= 6) {
+            points = 5;
+        } else {
+            points = 1;
+        }
+        return points;
     }
 
     private static int getIntInput(Scanner scanner) {
