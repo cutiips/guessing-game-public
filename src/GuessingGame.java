@@ -14,6 +14,19 @@ public class GuessingGame {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        boolean playAgain = true;
+
+        do {
+            playGame(scanner);
+            System.out.println("Do you want to play another round? (y/n): ");
+            String response = scanner.next();
+            playAgain = response.equalsIgnoreCase("y");
+        } while (playAgain);
+
+        scanner.close();
+    }
+
+    public static void playGame(Scanner scanner) {
         System.out.println("Choose your difficulty level (1: Easy, 2: Hard): ");
         int difficulty = getIntInput(scanner);
 
@@ -42,8 +55,6 @@ public class GuessingGame {
                 }
             }
         } while (userAnswer != computerNumber);
-
-        scanner.close();
     }
 
     public static String determineGuess(int userAnswer, int computerNumber, int count) {
