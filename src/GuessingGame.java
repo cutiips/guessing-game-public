@@ -69,6 +69,18 @@ public class GuessingGame {
         }
     }
 
+    public static int determinePoints(int count) {
+        int points;
+        if (count <= 3) {
+            points = 10;
+        } else if (count <= 6) {
+            points = 5;
+        } else {
+            points = 1;
+        }
+        return points;
+    }
+
     private static int getIntInput(Scanner scanner) {
         int input;
         while (true) {
