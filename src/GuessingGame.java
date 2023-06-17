@@ -29,6 +29,13 @@ public class GuessingGame {
             userAnswer = scanner.nextInt();
             System.out.println(determineGuess(userAnswer, computerNumber, count));
             count++;
+            if (count == 4) {
+                if (computerNumber % 2 == 0) {
+                    System.out.println("Hint: The number is even.");
+                } else {
+                    System.out.println("Hint: The number is odd.");
+                }
+            }
         }
 
         scanner.close();
