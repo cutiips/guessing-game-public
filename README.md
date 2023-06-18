@@ -23,16 +23,16 @@ java GuessingGame
 ## Improvement Ideas
 
 You can incorporate further details:
-- ~~Improving the code syntax, for example:
-    - ~~Add error handling for non-integer user input.
-    - ~~Use constants for the minimum and maximum values instead of hardcoding them.
-    - ~~Use a do-while loop
+- ~~Improving the code syntax, for example:~~
+    - ~~Add error handling for non-integer user input.~~
+    - ~~Use constants for the minimum and maximum values instead of hardcoding them.~~
+    - ~~Use a do-while loop~~
 Add comments to explain the purpose of the code and each method.
 - ~~Limiting the number of attempts~~
-- ~~Playing another round. 
-- ~~Choose a difficulty level
-- ~~Displaying score. 
-- ~~Giving points based on the number of attempts.
-- ~~Your ideas?
+- ~~Playing another round. ~~
+- ~~Choose a difficulty level~~
+- ~~Displaying score. ~~
+- ~~Giving points based on the number of attempts.~~
+- ~~Your ideas?~~
 
 Source: https://hackr.io/blog/java-projects
