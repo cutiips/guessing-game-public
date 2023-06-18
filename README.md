@@ -29,9 +29,9 @@ You can incorporate further details:
     - ~~Use a do-while loop~~
 Add comments to explain the purpose of the code and each method.
 - ~~Limiting the number of attempts~~
-- ~~Playing another round. ~~
+- ~~Playing another round.~~
 - ~~Choose a difficulty level~~
-- ~~Displaying score. ~~
+- ~~Displaying score.~~
 - ~~Giving points based on the number of attempts.~~
 - ~~Your ideas?~~
 
